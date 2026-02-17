@@ -19,7 +19,7 @@ const MainNavbar = () => {
             <li><Link href="/contact" className="text-foreground/65 hover:text-primary transition duration-200">Contact</Link></li>
           </ul>
           <div>
-            <Button variant="danger">Commencer</Button>
+            <Button className="bg-primary text-white">Commencer l&apos;aventure</Button>
           </div>
         </div>
       </nav>
