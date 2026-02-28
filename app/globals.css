@@ -1,11 +1,11 @@
 @import "tailwindcss";
 @import "@heroui/styles";
 
-
 @theme inline {
-  --color-primary: #409EBC;
-  --color-primary-dark: #093F5C;
-  --color-secondary: #F7C313;
-  --color-foreground: #04202F;
-  --color-background: #FAFAFA;
+  --color-primary: #409ebc;
+  --color-primary-dark: #093f5c;
+  --color-secondary: #f7c313;
+  --color-foreground: #04202f;
+  --color-background: #fafafa;
+  --font-gudlak: var(--font-gudlak);
 }
