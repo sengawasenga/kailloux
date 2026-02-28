@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import MainNavbar from "@/components/MainNavbar";
+import SmoothScroll from "@/components/ui/SmoothScroll";
 
 const quicksand = Quicksand({
   variable: "--font-quicksand",
@@ -69,7 +70,8 @@ export default function RootLayout({
       >
         <Analytics />
         <MainNavbar />
-        <div className={`${quicksand.className}`}>{children}</div>
+        <SmoothScroll />
+        <div>{children}</div>
       </body>
     </html>
   );
