@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import logoImg from "@/public/img/kailloux-logo-dark.svg"
-import Link from "next/link"
-import { Button } from "@heroui/react"
-import { usePathname } from "next/navigation"
-import { useEffect, useRef, useState } from "react"
-import gsap from "gsap"
+import Image from "next/image";
+import logoImg from "@/public/img/kailloux-logo-dark.svg";
+import Link from "next/link";
+import { Button } from "@heroui/react";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
 
 const navLinks = [
   { label: "Accueil", href: "/" },
@@ -14,56 +14,93 @@ const navLinks = [
   { label: "Comment ça marche ?", href: "/comment-ca-marche" },
   { label: "Blogs", href: "/blogs" },
   { label: "Contact", href: "/contact" },
-]
+];
 
 const MainNavbar = () => {
-  const pathname = usePathname()
-  const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
 
   // Hamburger bar refs
-  const bar1 = useRef<HTMLSpanElement>(null)
-  const bar2 = useRef<HTMLSpanElement>(null)
-  const bar3 = useRef<HTMLSpanElement>(null)
+  const bar1 = useRef<HTMLSpanElement>(null);
+  const bar2 = useRef<HTMLSpanElement>(null);
+  const bar3 = useRef<HTMLSpanElement>(null);
 
   // Mobile menu ref
-  const mobileMenuRef = useRef<HTMLDivElement>(null)
-  const overlayRef = useRef<HTMLDivElement>(null)
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const overlayRef = useRef<HTMLDivElement>(null);
 
   // Animate hamburger on open/close
   useEffect(() => {
     if (isOpen) {
       // Animate to X — bars meet at center (container is 20px tall; top bar center at 1px → move +9px; bottom bar center at 19px → move -9px)
-      gsap.to(bar1.current, { rotate: 45, y: 9, duration: 0.35, ease: "power2.inOut" })
-      gsap.to(bar2.current, { opacity: 0, scaleX: 0, duration: 0.15, ease: "power2.inOut" })
-      gsap.to(bar3.current, { rotate: -45, y: -9, duration: 0.35, ease: "power2.inOut" })
+      gsap.to(bar1.current, {
+        rotate: 45,
+        y: 9,
+        duration: 0.35,
+        ease: "power2.inOut",
+      });
+      gsap.to(bar2.current, {
+        opacity: 0,
+        scaleX: 0,
+        duration: 0.15,
+        ease: "power2.inOut",
+      });
+      gsap.to(bar3.current, {
+        rotate: -45,
+        y: -9,
+        duration: 0.35,
+        ease: "power2.inOut",
+      });
 
       // Animate menu in
-      gsap.set(mobileMenuRef.current, { display: "flex" })
+      gsap.set(mobileMenuRef.current, { display: "flex" });
       gsap.fromTo(
         mobileMenuRef.current,
         { opacity: 0, y: -20 },
-        { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }
-      )
+        { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" },
+      );
       gsap.fromTo(
         overlayRef.current,
         { opacity: 0 },
-        { opacity: 1, duration: 0.3, ease: "power2.out" }
-      )
+        { opacity: 1, duration: 0.3, ease: "power2.out" },
+      );
 
       // Stagger nav items
-      const items = mobileMenuRef.current?.querySelectorAll("li")
+      const items = mobileMenuRef.current?.querySelectorAll("li");
       if (items) {
         gsap.fromTo(
           items,
           { opacity: 0, x: -16 },
-          { opacity: 1, x: 0, duration: 0.3, stagger: 0.06, ease: "power2.out", delay: 0.1 }
-        )
+          {
+            opacity: 1,
+            x: 0,
+            duration: 0.3,
+            stagger: 0.06,
+            ease: "power2.out",
+            delay: 0.1,
+          },
+        );
       }
     } else {
       // Animate back to hamburger
-      gsap.to(bar1.current, { rotate: 0, y: 0, duration: 0.35, ease: "power2.inOut" })
-      gsap.to(bar2.current, { opacity: 1, scaleX: 1, duration: 0.35, ease: "power2.inOut" })
-      gsap.to(bar3.current, { rotate: 0, y: 0, duration: 0.35, ease: "power2.inOut" })
+      gsap.to(bar1.current, {
+        rotate: 0,
+        y: 0,
+        duration: 0.35,
+        ease: "power2.inOut",
+      });
+      gsap.to(bar2.current, {
+        opacity: 1,
+        scaleX: 1,
+        duration: 0.35,
+        ease: "power2.inOut",
+      });
+      gsap.to(bar3.current, {
+        rotate: 0,
+        y: 0,
+        duration: 0.35,
+        ease: "power2.inOut",
+      });
 
       // Animate menu out
       gsap.to(mobileMenuRef.current, {
@@ -71,21 +108,27 @@ const MainNavbar = () => {
         y: -10,
         duration: 0.25,
         ease: "power2.in",
-        onComplete: () => { gsap.set(mobileMenuRef.current, { display: "none" }) },
-      })
-      gsap.to(overlayRef.current, { opacity: 0, duration: 0.25, ease: "power2.in" })
+        onComplete: () => {
+          gsap.set(mobileMenuRef.current, { display: "none" });
+        },
+      });
+      gsap.to(overlayRef.current, {
+        opacity: 0,
+        duration: 0.25,
+        ease: "power2.in",
+      });
     }
-  }, [isOpen])
+  }, [isOpen]);
 
   // Close menu on route change
   useEffect(() => {
-    setIsOpen(false)
-  }, [pathname])
+    setIsOpen(false);
+  }, [pathname]);
 
   const isActive = (href: string) => {
-    if (href === "/") return pathname === "/"
-    return pathname.startsWith(href)
-  }
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
 
   return (
     <>
@@ -97,20 +140,27 @@ const MainNavbar = () => {
         onClick={() => setIsOpen(false)}
       />
 
-      <div className="absolute left-0 top-0 w-full z-50">
+      <div className="fixed left-0 top-0 w-full z-50">
         <nav className="flex items-center justify-between max-w-7xl mx-auto py-4 mt-4 md:mt-6 rounded-full bg-white/80 backdrop-blur-md px-5 md:px-12">
           {/* Logo */}
           <div>
-            <Image src={logoImg} alt="Logo" className="h-[36px] md:h-[40px] w-auto" />
+            <Image
+              src={logoImg}
+              alt="Logo"
+              className="h-[36px] md:h-[40px] w-auto"
+            />
           </div>
 
           {/* Desktop nav links */}
           <div className="hidden lg:flex items-center gap-8">
             <ul className="flex items-center gap-2">
               {navLinks.map(({ label, href }) => {
-                const active = isActive(href)
+                const active = isActive(href);
                 return (
-                  <li key={href} className="relative flex flex-col items-center">
+                  <li
+                    key={href}
+                    className="relative flex flex-col items-center"
+                  >
                     <Link
                       href={href}
                       className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
@@ -128,7 +178,7 @@ const MainNavbar = () => {
                       }`}
                     />
                   </li>
-                )
+                );
               })}
             </ul>
             <Button className="bg-primary text-white text-sm rounded-full">
@@ -167,7 +217,7 @@ const MainNavbar = () => {
         >
           <ul className="flex flex-col py-3 px-2">
             {navLinks.map(({ label, href }) => {
-              const active = isActive(href)
+              const active = isActive(href);
               return (
                 <li key={href}>
                   <Link
@@ -185,7 +235,7 @@ const MainNavbar = () => {
                     )}
                   </Link>
                 </li>
-              )
+              );
             })}
           </ul>
           <div className="px-4 pb-4 pt-1">
@@ -196,7 +246,7 @@ const MainNavbar = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default MainNavbar
+export default MainNavbar;
