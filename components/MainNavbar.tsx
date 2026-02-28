@@ -173,8 +173,8 @@ const MainNavbar = () => {
                     </Link>
                     {/* Bottom indicator dot for active page (desktop) */}
                     <span
-                      className={`absolute -bottom-2 left-1/2 -translate-x-1/2 h-1.5 rounded-full bg-primary transition-all duration-300 ${
-                        active ? "w-5 opacity-100" : "w-0 opacity-0"
+                      className={`absolute -bottom-1 left-1/2 -translate-x-1/2 h-1 rounded-full bg-primary transition-all duration-300 ${
+                        active ? "w-3 opacity-100" : "w-0 opacity-0"
                       }`}
                     />
                   </li>

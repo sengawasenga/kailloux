@@ -69,7 +69,7 @@ export default function RootLayout({
       >
         <Analytics />
         <MainNavbar />
-        <div>{children}</div>
+        <div className={`${quicksand.className}`}>{children}</div>
       </body>
     </html>
   );
