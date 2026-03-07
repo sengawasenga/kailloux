@@ -54,9 +54,8 @@ const Hero = () => {
 
         pill.addEventListener("mouseenter", () => {
           gsap.to(pill, {
-            y: -16,
+            y: -10,
             scale: 1.03,
-            boxShadow: "0 25px 60px -12px rgba(0,0,0,0.25)",
             duration: 0.4,
             ease: "power2.out",
           });
@@ -73,7 +72,6 @@ const Hero = () => {
           gsap.to(pill, {
             y: 0,
             scale: 1,
-            boxShadow: "0 0px 0px 0px rgba(0,0,0,0)",
             duration: 0.4,
             ease: "power2.out",
           });
@@ -99,7 +97,7 @@ const Hero = () => {
     >
       <div className="px-5 md:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
-          <div className="overflow-hidden">
+          <div className="">
             <h1 className="hero-title uppercase text-5xl md:text-6xl lg:text-7xl font-gudlak font-extrabold">
               Ici, on trouve du travail.
             </h1>
@@ -118,7 +116,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="mx-auto max-w-[1500px] w-full overflow-hidden flex justify-center">
+      <div className="mx-auto max-w-[1500px] w-full overflow-hidden flex justify-center px-6 py-12">
         <div className="hero-pill rounded-full h-[450px] md:h-[600px] lg:h-[700px] min-w-[280px] sm:min-w-[350px] w-full bg-primary overflow-hidden relative cursor-pointer">
           <Image
             src={kImage1}
