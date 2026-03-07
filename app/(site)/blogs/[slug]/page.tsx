@@ -301,7 +301,7 @@ const BlogDetailPage = () => {
                       {related.category}
                     </div>
                   </div>
-                  <div className="p-8 flex flex-col flex-grow">
+                  <div className="p-8 flex flex-col grow">
                     <div className="flex items-center gap-4 text-sm text-neutral-500 mb-4">
                       <div className="flex items-center gap-1.5">
                         <Icon icon="solar:calendar-linear" />

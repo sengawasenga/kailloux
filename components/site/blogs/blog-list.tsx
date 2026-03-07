@@ -76,7 +76,7 @@ const BlogListSection = () => {
               className="blog-card group flex flex-col bg-white rounded-3xl border border-neutral-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
             >
               {/* Image Container */}
-              <div className="relative w-full aspect-video md:aspect-[4/3] overflow-hidden bg-neutral-100">
+              <div className="relative w-full aspect-video md:aspect-4/3 overflow-hidden bg-neutral-100">
                 <Image
                   src={blog.image}
                   alt={blog.title}
@@ -89,7 +89,7 @@ const BlogListSection = () => {
               </div>
 
               {/* Content */}
-              <div className="flex flex-col flex-grow p-8">
+              <div className="flex flex-col grow p-8">
                 <div className="flex items-center gap-4 text-sm text-neutral-500 mb-4">
                   <div className="flex items-center gap-1.5">
                     <Icon icon="solar:calendar-linear" />
