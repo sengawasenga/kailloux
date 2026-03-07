@@ -28,7 +28,7 @@ const AboutHeroSection = () => {
     >
       <div className="max-w-4xl mx-auto text-center flex flex-col gap-8 md:gap-12">
         <h1 className="hero-reveal text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-gudlak font-extrabold text-neutral-900 leading-tight">
-          À propos <br className="hidden sm:block" />
+          A propos <br className="hidden sm:block" />
           <span className="text-primary">de Kailloux</span>
         </h1>
 
