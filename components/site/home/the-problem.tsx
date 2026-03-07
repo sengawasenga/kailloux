@@ -35,7 +35,7 @@ const cards = [
       "Des milliers de personnes sont prêtes à travailler. Le manque de visibilité et d'outils accessibles freine leur accès aux opportunités.",
     image: problemCard2,
     bg: "secondary",
-    color: "white",
+    color: "foreground",
   },
   {
     title: "Le marche manque de clarte.",
@@ -157,10 +157,14 @@ const TheProblemSection = () => {
             {/* Card content */}
             <div className="card-content absolute inset-0 flex flex-col justify-center p-8 md:p-12 lg:p-16">
               <div className="max-w-4xl">
-                <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-gudlak font-bold text-white leading-tight mb-4 md:mb-6 uppercase">
+                <h3
+                  className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-gudlak font-bold text-${card.color} leading-tight mb-4 md:mb-6 uppercase`}
+                >
                   {card.title}
                 </h3>
-                <p className="text-white/75 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl">
+                <p
+                  className={`text-${card.color}/75 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl`}
+                >
                   {card.description}
                 </p>
               </div>
