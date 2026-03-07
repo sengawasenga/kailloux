@@ -80,7 +80,7 @@ export default function LoadingScreen() {
   return (
     <div
       ref={overlayRef}
-      className="fixed inset-0 z-[9999] flex items-center justify-center bg-primary will-change-transform"
+      className="fixed inset-0 z-9999 flex items-center justify-center bg-primary will-change-transform"
     >
       <div className="relative flex items-center justify-center">
         {/* Pulse glow */}

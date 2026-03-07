@@ -143,13 +143,13 @@ const MainNavbar = () => {
       <div className="fixed left-0 top-0 w-full z-50">
         <nav className="flex items-center justify-between max-w-7xl mx-auto py-4 mt-4 md:mt-6 rounded-full bg-white/80 backdrop-blur-md px-5 md:px-12">
           {/* Logo */}
-          <div>
+          <Link href="/">
             <Image
               src={logoImg}
               alt="Logo"
               className="h-[36px] md:h-[40px] w-auto"
             />
-          </div>
+          </Link>
 
           {/* Desktop nav links */}
           <div className="hidden lg:flex items-center gap-8">

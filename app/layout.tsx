@@ -54,9 +54,55 @@ const gudlak = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Kailloux",
+  title: {
+    default: "Kailloux — La plateforme pour tous les talents",
+    template: "%s | Kailloux",
+  },
   description:
-    "Kailloux connecte les talents congolais à toutes les opportunités — du quartier au bureau. Crée ton profil, découvre des offres près de toi et commence à travailler dès aujourd’hui.",
+    "Kailloux connecte les talents congolais à toutes les opportunités — du quartier au bureau. Créez votre profil, découvrez des offres près de chez vous et commencez à travailler dès aujourd’hui.",
+  keywords: [
+    "emploi",
+    "recrutement",
+    "Congo",
+    "RDC",
+    "talents",
+    "jobs",
+    "opportunités",
+    "travail",
+    "Kinshasa",
+  ],
+  authors: [{ name: "Kailloux Team" }],
+  creator: "Kailloux",
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: "https://kailloux.com/",
+    siteName: "Kailloux",
+    title: "Kailloux — La plateforme pour tous les talents",
+    description:
+      "Connectez les talents aux opportunités réelles. Que vous soyez chercheur d'emploi ou recruteur, Kailloux simplifie votre rencontre.",
+    images: [
+      {
+        url: "/img/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Kailloux - Ici on trouve du travail",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kailloux — La plateforme pour tous les talents",
+    description: "Connectez les talents aux opportunités réelles.",
+    images: ["/img/og-image.png"],
+    creator: "@Kailloux",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-32x32.png",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({

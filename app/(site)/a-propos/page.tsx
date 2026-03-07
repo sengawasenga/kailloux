@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import AboutHeroSection from "@/components/site/about/hero";
 import OurApproachSection from "@/components/site/about/our-approach";
 import OurVisionSection from "@/components/site/about/our-vision";
@@ -5,6 +6,12 @@ import FutureSection from "@/components/site/about/FutureSection";
 import FoundersSection from "@/components/site/about/founders";
 import FinalCTASection from "@/components/site/FinalCTASection";
 import Footer from "@/components/site/Footer";
+
+export const metadata: Metadata = {
+  title: "À propos de nous",
+  description:
+    "Découvrez l'histoire de Kailloux, notre mission pour l'inclusivité et les fondateurs derrière cette plateforme révolutionnaire.",
+};
 
 const AboutPage = () => {
   return (
