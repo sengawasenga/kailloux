@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 const AboutPage = () => {
   return (
-    <div className="relative min-h-screen w-full font-sans">
+    <div className="relative min-h-screen w-full">
       <main className="pt-20">
         <AboutHeroSection />
         <OurApproachSection />

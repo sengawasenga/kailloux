@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const BlogsPage = () => {
   return (
-    <div className="relative min-h-screen w-full font-sans">
+    <div className="relative min-h-screen w-full">
       <main>
         <BlogsHeroSection />
         <BlogListSection />

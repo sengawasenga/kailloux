@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const ContactPage = () => {
   return (
-    <div className="relative min-h-screen w-full font-sans">
+    <div className="relative min-h-screen w-full">
       <main>
         <ContactHeroSection />
         <ContactFormSection />

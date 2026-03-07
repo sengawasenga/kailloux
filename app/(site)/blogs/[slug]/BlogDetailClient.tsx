@@ -88,7 +88,7 @@ const BlogDetailClient = ({ blog, allBlogs }: BlogDetailClientProps) => {
   };
 
   return (
-    <div className="relative min-h-screen w-full font-sans">
+    <div className="relative min-h-screen w-full">
       <main ref={containerRef}>
         {/* Article Header */}
         <section className="pt-40 pb-6 px-5 md:px-8">

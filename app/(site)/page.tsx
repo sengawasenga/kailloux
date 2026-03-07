@@ -10,7 +10,7 @@ import Footer from "@/components/site/Footer";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen w-full font-sans">
+    <div className="relative min-h-screen w-full">
       <main className="">
         <Hero />
         <TheProblemSection />

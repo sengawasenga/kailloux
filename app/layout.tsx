@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Quicksand } from "next/font/google";
+import { Nunito } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
@@ -7,8 +7,8 @@ import MainNavbar from "@/components/MainNavbar";
 import SmoothScroll from "@/components/ui/SmoothScroll";
 import LoadingScreen from "@/components/LoadingScreen";
 
-const quicksand = Quicksand({
-  variable: "--font-quicksand",
+const nunito = Nunito({
+  variable: "--font-nunito",
   subsets: ["latin"],
 });
 
@@ -113,13 +113,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <body
-        className={`${quicksand.className} ${gudlak.variable} font-light antialiased bg-background text-foreground overflow-x-hidden`}
+        className={`${nunito.className} ${nunito.variable} ${gudlak.variable} font-light antialiased bg-background text-foreground overflow-x-hidden`}
       >
         <Analytics />
         <MainNavbar />
         <SmoothScroll />
         <LoadingScreen />
-        <div>{children}</div>
+        <main>{children}</main>
       </body>
     </html>
   );

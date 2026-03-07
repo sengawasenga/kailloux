@@ -1,11 +1,21 @@
 @import "tailwindcss";
 @import "@heroui/styles";
 
-@theme inline {
+@theme {
   --color-primary: #409ebc;
   --color-primary-dark: #093f5c;
   --color-secondary: #f7c313;
   --color-foreground: #04202f;
   --color-background: #fafafa;
+  --font-nunito: var(--font-nunito);
+  --font-sans: var(--font-nunito);
   --font-gudlak: var(--font-gudlak);
+}
+
+/* Global font reset to ensure Nunito is used everywhere besides explicit Gudlak */
+@layer base {
+  body,
+  html {
+    font-family: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+  }
 }

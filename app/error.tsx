@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Error = () => {
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-white font-sans">
+    <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-white">
       {/* Giant 500 background text */}
       <span
         className="absolute text-[30vw] md:text-[35vw] font-gudlak font-extrabold text-neutral-100 select-none pointer-events-none leading-none tracking-tighter"
