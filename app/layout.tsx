@@ -5,6 +5,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import MainNavbar from "@/components/MainNavbar";
 import SmoothScroll from "@/components/ui/SmoothScroll";
+import LoadingScreen from "@/components/LoadingScreen";
 
 const quicksand = Quicksand({
   variable: "--font-quicksand",
@@ -71,6 +72,7 @@ export default function RootLayout({
         <Analytics />
         <MainNavbar />
         <SmoothScroll />
+        <LoadingScreen />
         <div>{children}</div>
       </body>
     </html>
