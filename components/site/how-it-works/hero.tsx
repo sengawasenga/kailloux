@@ -26,15 +26,15 @@ const HowItWorksHeroSection = () => {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-[80vh] flex flex-col justify-center items-center py-32 px-5 md:px-8 overflow-hidden"
+      className="pt-40 pb-16 px-5 md:px-8 bg-neutral-50 border-b border-neutral-100"
     >
       <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col gap-8 md:gap-10">
-        <h1 className="hero-content text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-gudlak font-extrabold leading-tight">
+        <h1 className="hero-content text-3xl sm:text-4xl md:text-5xl uppercase font-gudlak font-extrabold leading-tight">
           Comment fonctionne <br className="hidden sm:block" />
           <span className="text-secondary">Kailloux</span>
         </h1>
 
-        <div className="hero-content text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto flex flex-col gap-6 leading-relaxed">
+        <div className="hero-content text-lg md:text-xl max-w-3xl mx-auto flex flex-col gap-4 leading-relaxed">
           <p className="font-medium">
             Kailloux simplifie la rencontre entre les talents et les
             opportunités.

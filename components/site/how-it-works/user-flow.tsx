@@ -14,14 +14,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 const steps = [
   {
-    title: "Explorez les opportunités",
+    title: "Explorez les opportunites",
     description:
       "Parcourez les offres d’emploi à travers une expérience fluide qui vous permet de découvrir facilement de nouvelles opportunités.",
     image: kImage1,
     bgColor: "bg-primary/10",
   },
   {
-    title: "Consultez les détails",
+    title: "Consultez les details",
     description:
       "Chaque offre présente les informations essentielles : missions, localisation, exigences et modalités de contact.",
     image: kImage2,
@@ -35,7 +35,7 @@ const steps = [
     bgColor: "bg-primary/10",
   },
   {
-    title: "Créez des opportunités",
+    title: "Creez des opportunites",
     description:
       "Pour les recruteurs, publier une offre permet de rendre une opportunité visible et d’atteindre rapidement des candidats disponibles.",
     image: kImage4,
@@ -118,7 +118,7 @@ const UserFlowSection = () => {
                   </span>
                   <div className="h-[2px] w-12 bg-primary/20" />
                 </div>
-                <h2 className="text-4xl sm:text-5xl md:text-6xl font-gudlak font-bold text-neutral-900 leading-tight">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl uppercase font-gudlak font-bold leading-tight">
                   {step.title}
                 </h2>
                 <p className="text-lg md:text-xl text-neutral-600 leading-relaxed font-medium">

@@ -58,8 +58,8 @@ const BenefitsSection = () => {
     <section ref={containerRef} className="py-24 px-5 md:px-8 bg-neutral-50">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         <div className="text-center max-w-2xl mb-16 md:mb-20">
-          <h2 className="text-4xl sm:text-5xl font-gudlak font-extrabold mb-6 text-neutral-900">
-            Pourquoi choisir <span className="text-primary">Kailloux</span> ?
+          <h2 className="text-3xl sm:text-4xl md:text-5xl uppercase font-gudlak font-extrabold mb-6 text-neutral-900">
+            Pourquoi choisir <span className="text-primary">Kailloux</span>
           </h2>
           <p className="text-lg text-neutral-600">
             Découvrez nos principaux avantages pour accélérer votre expérience
@@ -76,7 +76,7 @@ const BenefitsSection = () => {
               <div className="w-16 h-16 rounded-2xl bg-neutral-50 flex items-center justify-center text-primary mb-2 border border-neutral-100">
                 <Icon icon={benefit.icon} className="w-8 h-8" />
               </div>
-              <h3 className="text-2xl font-bold font-gudlak text-neutral-900">
+              <h3 className="text-2xl font-bold text-neutral-900">
                 {benefit.title}
               </h3>
               <p className="text-neutral-600 leading-relaxed">
