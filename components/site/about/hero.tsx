@@ -24,18 +24,17 @@ const AboutHeroSection = () => {
   return (
     <section
       ref={containerRef}
-      className="min-h-[80vh] flex flex-col justify-center items-center py-32 px-5 md:px-8 bg-neutral-50"
+      className="pt-40 pb-16 px-5 md:px-8 bg-neutral-50 border-b border-neutral-100"
     >
       <div className="max-w-4xl mx-auto text-center flex flex-col gap-8 md:gap-12">
-        <h1 className="hero-reveal text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-gudlak font-extrabold text-neutral-900 leading-tight">
-          A propos <br className="hidden sm:block" />
-          <span className="text-primary">de Kailloux</span>
+        <h1 className="hero-reveal uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-gudlak font-extrabold leading-tight">
+          A propos <span className="text-primary">de Kailloux</span>
         </h1>
 
-        <div className="hero-reveal text-lg sm:text-xl md:text-2xl text-neutral-600 max-w-3xl mx-auto flex flex-col gap-6 leading-relaxed">
-          <p className="font-medium text-neutral-800">
-            Kailloux est né d’une conviction simple :<br />
-            chaque talent mérite une opportunité.
+        <div className="hero-reveal text-lg md:text-xl max-w-3xl mx-auto flex flex-col gap-4 leading-relaxed">
+          <p className="">
+            Kailloux est né d’une conviction simple : chaque talent mérite une
+            opportunité.
           </p>
           <p>
             Notre mission est de rendre la recherche d’emploi plus simple, plus

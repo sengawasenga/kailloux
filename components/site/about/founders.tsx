@@ -14,27 +14,27 @@ gsap.registerPlugin(ScrollTrigger);
 
 const founders = [
   {
-    name: "Daniel Abutumange",
-    role: "Co-fondateur",
-    image: kImage1,
-    bgColor: "bg-primary",
-    marginTop: "mt-0",
-    socials: [
-      { name: "LinkedIn", icon: "solar:link-linear", url: "#" },
-      { name: "Twitter", icon: "solar:letter-linear", url: "#" },
-      { name: "Instagram", icon: "solar:camera-linear", url: "#" },
-    ],
-  },
-  {
     name: "Carmel Siki",
     role: "Co-fondateur",
     image: kImage2,
     bgColor: "bg-primary-dark",
+    marginTop: "mt-0",
+    socials: [
+      { name: "LinkedIn", icon: "mdi:linkedin", url: "#" },
+      { name: "X", icon: "streamline-logos:x-twitter-logo", url: "#" },
+      { name: "Instagram", icon: "mdi:instagram", url: "#" },
+    ],
+  },
+  {
+    name: "Daniel Abutumange",
+    role: "Co-fondateur",
+    image: kImage1,
+    bgColor: "bg-primary",
     marginTop: "mt-0 md:mt-[80px]",
     socials: [
-      { name: "LinkedIn", icon: "solar:link-linear", url: "#" },
-      { name: "Twitter", icon: "solar:letter-linear", url: "#" },
-      { name: "Instagram", icon: "solar:camera-linear", url: "#" },
+      { name: "LinkedIn", icon: "mdi:linkedin", url: "#" },
+      { name: "X", icon: "streamline-logos:x-twitter-logo", url: "#" },
+      { name: "Instagram", icon: "mdi:instagram", url: "#" },
     ],
   },
   {
@@ -44,9 +44,9 @@ const founders = [
     bgColor: "bg-secondary",
     marginTop: "mt-0 md:mt-[40px]",
     socials: [
-      { name: "LinkedIn", icon: "solar:link-linear", url: "#" },
-      { name: "Twitter", icon: "solar:letter-linear", url: "#" },
-      { name: "Instagram", icon: "solar:camera-linear", url: "#" },
+      { name: "LinkedIn", icon: "mdi:linkedin", url: "#" },
+      { name: "X", icon: "streamline-logos:x-twitter-logo", url: "#" },
+      { name: "Instagram", icon: "mdi:instagram", url: "#" },
     ],
   },
 ];
@@ -80,8 +80,8 @@ const FoundersSection = () => {
     >
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         <div className="text-center max-w-2xl mb-16 md:mb-24">
-          <h2 className="text-4xl sm:text-5xl font-gudlak font-extrabold mb-6 text-neutral-900">
-            L&apos;équipe derrière{" "}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl uppercase font-gudlak font-extrabold mb-6">
+            L&apos;équipe derriere{" "}
             <span className="text-primary">Kailloux</span>
           </h2>
           <p className="text-lg text-neutral-600">
@@ -99,7 +99,7 @@ const FoundersSection = () => {
             >
               {/* Image Pill like Hero */}
               <div
-                className={`rounded-full h-[400px] md:h-[500px] w-full max-w-[320px] ${founder.bgColor} overflow-hidden relative mb-8 transition-transform duration-500 group-hover:-translate-y-4 shadow-sm group-hover:shadow-lg`}
+                className={`rounded-full h-[400px] md:h-[500px] w-full max-w-[320px] ${founder.bgColor} overflow-hidden relative mb-4 transition-transform duration-500 group-hover:-translate-y-4 shadow-sm group-hover:shadow-lg`}
               >
                 <Image
                   src={founder.image}
@@ -111,10 +111,8 @@ const FoundersSection = () => {
               </div>
 
               {/* Founder Info */}
-              <h3 className="text-3xl font-bold font-gudlak text-neutral-900 mb-2">
-                {founder.name}
-              </h3>
-              <p className="text-primary font-medium text-lg mb-6">
+              <h3 className="text-xl font-bold mb-1">{founder.name}</h3>
+              <p className="text-primary font-medium text-lg mb-1">
                 {founder.role}
               </p>
 
@@ -124,10 +122,10 @@ const FoundersSection = () => {
                   <a
                     key={sIdx}
                     href={social.url}
-                    className="w-12 h-12 rounded-full bg-white border border-neutral-100 flex items-center justify-center text-neutral-600 hover:bg-neutral-900 hover:text-white transition-all transform hover:-translate-y-1 shadow-sm hover:shadow-md"
+                    className="w-9 h-9 rounded-full bg-white border border-neutral-100 flex items-center justify-center text-neutral-600 hover:bg-primary hover:text-white transition-all transform hover:-translate-y-[2px]"
                     aria-label={`${social.name} de ${founder.name}`}
                   >
-                    <Icon icon={social.icon} className="w-6 h-6" />
+                    <Icon icon={social.icon} className="w-5 h-5" />
                   </a>
                 ))}
               </div>

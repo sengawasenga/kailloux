@@ -40,7 +40,7 @@ const OurVisionSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[70vh] flex items-center justify-center py-32 px-5 md:px-8 bg-neutral-900 text-white overflow-hidden"
+      className="relative min-h-[70vh] flex items-center justify-center py-32 px-5 md:px-8 bg-primary-dark text-white overflow-hidden"
     >
       {/* Subtle Background Gradient Pattern */}
       <div
@@ -62,11 +62,11 @@ const OurVisionSection = () => {
         ref={textRef}
         className="relative z-10 max-w-4xl mx-auto text-center flex flex-col gap-8 md:gap-12"
       >
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-gudlak font-extrabold leading-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl uppercase font-gudlak font-extrabold leading-tight">
           Notre <span className="text-secondary">vision</span>
         </h2>
 
-        <div className="text-lg sm:text-xl md:text-2xl text-neutral-300 max-w-3xl mx-auto flex flex-col gap-6 leading-relaxed">
+        <div className="text-lg md:text-xl text-neutral-300 max-w-3xl mx-auto flex flex-col gap-6 leading-relaxed">
           <p className="font-medium text-white">
             Nous croyons qu’un accès plus simple aux opportunités peut
             transformer des parcours de vie.

@@ -50,9 +50,9 @@ const FutureSection = () => {
         className="max-w-7xl mx-auto px-5 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full"
       >
         <div className="flex flex-col gap-8">
-          <h2 className="reveal-text text-4xl sm:text-5xl md:text-6xl font-gudlak font-extrabold text-neutral-900 leading-tight">
+          <h2 className="reveal-text uppercase text-3xl sm:text-4xl md:text-5xl font-gudlak font-extrabold text-neutral-900 leading-tight">
             Construire l’avenir <br className="hidden sm:block" />
-            <span className="text-primary">des opportunités</span>
+            <span className="text-primary">des opportunites</span>
           </h2>
           <div className="reveal-text flex flex-col gap-6 text-lg lg:text-xl text-neutral-600">
             <p>
