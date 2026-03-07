@@ -103,12 +103,12 @@ const BlogDetailClient = ({ blog, allBlogs }: BlogDetailClientProps) => {
             </Link>
 
             {/* Title */}
-            <h1 className="detail-reveal text-4xl sm:text-5xl md:text-6xl font-gudlak font-extrabold text-neutral-900 leading-tight mb-6">
+            <h1 className="detail-reveal text-3xl sm:text-4xl md:text-5xl uppercase font-extrabold text-neutral-900 leading-tight mb-6">
               {blog.title}
             </h1>
 
             {/* Excerpt */}
-            <p className="detail-reveal text-xl md:text-2xl text-neutral-500 leading-relaxed mb-8">
+            <p className="detail-reveal text-lg md:text-xl text-neutral-500 leading-relaxed mb-8">
               {blog.excerpt}
             </p>
 
@@ -126,22 +126,6 @@ const BlogDetailClient = ({ blog, allBlogs }: BlogDetailClientProps) => {
             {/* Engagement / Stats Bar */}
             <div className="detail-reveal flex items-center justify-between py-4 border-y border-neutral-200">
               <div className="flex items-center gap-6 text-neutral-500">
-                <button
-                  onClick={() => setLiked(!liked)}
-                  className={`flex items-center gap-1.5 hover:text-red-500 transition-colors ${liked ? "text-red-500" : ""}`}
-                >
-                  <Icon
-                    icon={liked ? "solar:heart-bold" : "solar:heart-linear"}
-                    className="w-5 h-5"
-                  />
-                  <span className="text-sm">
-                    {blog.views > 100 ? Math.round(blog.views / 10) : 12}
-                  </span>
-                </button>
-                <button className="flex items-center gap-1.5 hover:text-primary transition-colors">
-                  <Icon icon="solar:chat-round-linear" className="w-5 h-5" />
-                  <span className="text-sm">{Math.round(blog.views / 60)}</span>
-                </button>
                 <div className="flex items-center gap-1.5">
                   <Icon icon="solar:eye-linear" className="w-5 h-5" />
                   <span className="text-sm">{blog.views.toLocaleString()}</span>
@@ -164,33 +148,6 @@ const BlogDetailClient = ({ blog, allBlogs }: BlogDetailClientProps) => {
                   <span className="text-sm font-medium hidden sm:inline">
                     {copied ? "Copié !" : "Partager"}
                   </span>
-                </button>
-                <button
-                  onClick={() => handleShare("twitter")}
-                  className="w-9 h-9 rounded-full flex items-center justify-center text-neutral-400 hover:bg-neutral-100 hover:text-neutral-900 transition-all"
-                >
-                  <Icon
-                    icon="solar:letter-linear"
-                    className="w-[18px] h-[18px]"
-                  />
-                </button>
-                <button
-                  onClick={() => handleShare("linkedin")}
-                  className="w-9 h-9 rounded-full flex items-center justify-center text-neutral-400 hover:bg-neutral-100 hover:text-neutral-900 transition-all"
-                >
-                  <Icon
-                    icon="solar:link-linear"
-                    className="w-[18px] h-[18px]"
-                  />
-                </button>
-                <button
-                  onClick={() => handleShare("facebook")}
-                  className="w-9 h-9 rounded-full flex items-center justify-center text-neutral-400 hover:bg-neutral-100 hover:text-neutral-900 transition-all"
-                >
-                  <Icon
-                    icon="solar:share-linear"
-                    className="w-[18px] h-[18px]"
-                  />
                 </button>
               </div>
             </div>
@@ -225,18 +182,6 @@ const BlogDetailClient = ({ blog, allBlogs }: BlogDetailClientProps) => {
         <section className="px-5 md:px-8 pb-12">
           <div className="max-w-3xl mx-auto border-t border-neutral-200 pt-8 flex items-center justify-between">
             <div className="flex items-center gap-6 text-neutral-500">
-              <button
-                onClick={() => setLiked(!liked)}
-                className={`flex items-center gap-1.5 hover:text-red-500 transition-colors ${liked ? "text-red-500" : ""}`}
-              >
-                <Icon
-                  icon={liked ? "solar:heart-bold" : "solar:heart-linear"}
-                  className="w-5 h-5"
-                />
-                <span className="text-sm">
-                  {blog.views > 100 ? Math.round(blog.views / 10) : 12}
-                </span>
-              </button>
               <div className="flex items-center gap-1.5">
                 <Icon icon="solar:eye-linear" className="w-5 h-5" />
                 <span className="text-sm">{blog.views.toLocaleString()}</span>
@@ -262,8 +207,8 @@ const BlogDetailClient = ({ blog, allBlogs }: BlogDetailClientProps) => {
         {/* Related Articles */}
         <section className="border-t border-neutral-100 bg-neutral-50">
           <div className="max-w-7xl mx-auto px-5 md:px-8 py-24">
-            <h2 className="text-3xl sm:text-4xl font-gudlak font-extrabold text-neutral-900 mb-12">
-              Articles à découvrir
+            <h2 className="text-3xl sm:text-4xl uppercase font-gudlak font-extrabold text-neutral-900 mb-12">
+              Articles a decouvrir
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {finalRelated.map((related) => (

@@ -27,10 +27,10 @@ const BlogsHeroSection = () => {
       className="pt-40 pb-20 px-5 md:px-8 bg-neutral-50 border-b border-neutral-100"
     >
       <div className="max-w-4xl mx-auto text-center flex flex-col gap-6 md:gap-8">
-        <h1 className="hero-content text-5xl sm:text-6xl md:text-7xl font-gudlak font-extrabold text-neutral-900 leading-tight">
+        <h1 className="hero-content text-3xl sm:text-4xl md:text-5xl uppercase font-gudlak font-extrabold leading-tight">
           Notre <span className="text-primary">Blog</span>
         </h1>
-        <p className="hero-content text-lg sm:text-xl md:text-2xl text-neutral-600 max-w-2xl mx-auto leading-relaxed">
+        <p className="hero-content text-lg md:text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed">
           Découvrez nos dernières actualités, conseils carrières et décryptages
           du marché de l&apos;emploi.
         </p>

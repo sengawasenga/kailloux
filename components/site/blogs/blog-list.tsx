@@ -56,7 +56,7 @@ const BlogListSection = () => {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 shadow-sm border ${
+              className={`px-5 py-2 rounded-full font-medium transition-all duration-300 border cursor-pointer ${
                 activeCategory === cat
                   ? "bg-primary text-white border-primary"
                   : "bg-white text-neutral-600 border-neutral-200 hover:border-primary hover:text-primary"
@@ -95,16 +95,12 @@ const BlogListSection = () => {
                     <Icon icon="solar:calendar-linear" />
                     <span>{blog.date}</span>
                   </div>
-                  <div className="flex items-center gap-1.5">
-                    <Icon icon="solar:clock-circle-linear" />
-                    <span>{blog.readTime}</span>
-                  </div>
                 </div>
 
-                <h3 className="text-2xl font-bold font-gudlak text-neutral-900 mb-4 group-hover:text-primary transition-colors line-clamp-2">
+                <h3 className="text-2xl font-bold text-neutral-900 mb-4 group-hover:text-primary transition-colors line-clamp-2">
                   {blog.title}
                 </h3>
-                <p className="text-neutral-600 mb-6 line-clamp-3">
+                <p className="text-neutral-600 mb-6 line-clamp-2 text-sm">
                   {blog.excerpt}
                 </p>
 
