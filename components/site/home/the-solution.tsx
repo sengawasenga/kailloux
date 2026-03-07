@@ -42,8 +42,8 @@ const TheSolutionSection = () => {
         className="max-w-7xl mx-auto px-5 md:px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center"
       >
         <div className="flex flex-col gap-8">
-          <h2 className="reveal-element text-4xl sm:text-5xl md:text-6xl font-gudlak font-extrabold leading-tight">
-            Une nouvelle façon de découvrir les opportunités.
+          <h2 className="reveal-element text-3xl sm:text-4xl md:text-5xl font-gudlak font-extrabold leading-tight uppercase">
+            Une nouvelle facon de decouvrir les opportunites.
           </h2>
           <div className="reveal-element flex flex-col gap-6 text-lg lg:text-xl text-neutral-700">
             <p>

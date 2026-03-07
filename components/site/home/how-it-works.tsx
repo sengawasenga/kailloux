@@ -74,8 +74,8 @@ const HowItWorksSection = () => {
     <section className="py-24 px-5 md:px-8 bg-white min-h-[80vh] flex flex-col justify-center">
       <div ref={containerRef} className="max-w-4xl mx-auto w-full">
         <div className="text-center mb-16 md:mb-24 reveal-title">
-          <h2 className="text-4xl sm:text-5xl font-gudlak font-extrabold mb-6">
-            Comment ça marche ?
+          <h2 className="text-3xl sm:text-4xl md:text-5xl uppercase font-gudlak font-extrabold mb-6">
+            Comment ca marche ?
           </h2>
           <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
             Trois étapes simples pour transformer vos recherches en rencontres
@@ -85,7 +85,7 @@ const HowItWorksSection = () => {
 
         <div className="relative isolate px-[2vw]">
           {/* Vertical connecting line */}
-          <div className="absolute left-6 md:left-10 top-10 bottom-10 w-1 bg-neutral-200 -z-10 rounded-full">
+          <div className="absolute left-6 md:left-10 top-[24px] md:top-[40px] bottom-[24px] md:bottom-[40px] w-1 bg-neutral-200 -z-10 rounded-full -translate-x-1/2">
             <div className="progress-line w-full bg-primary rounded-full drop-shadow-md" />
           </div>
 
@@ -96,19 +96,19 @@ const HowItWorksSection = () => {
                 className="step-card flex gap-6 md:gap-10 items-start"
               >
                 {/* Step indicator */}
-                <div className="relative shrink-0 w-12 h-12 md:w-20 md:h-20 bg-primary rounded-full flex items-center justify-center text-white border-4 border-white shadow-lg z-10">
-                  <span className="font-gudlak font-bold text-xl md:text-2xl pt-1">
+                <div className="relative shrink-0 w-12 h-12 md:w-20 md:h-20 bg-primary rounded-full flex items-center justify-center text-white border-4 border-white shadow-lg z-10 left-[calc(-1*2vw)]">
+                  <span className="font-bold text-xl md:text-2xl pt-1">
                     {step.number}
                   </span>
                 </div>
 
                 {/* Step content */}
-                <div className="bg-neutral-50 rounded-3xl p-6 md:p-8 flex-1 border border-neutral-100 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="bg-white p-3 rounded-2xl shadow-sm border border-neutral-100 text-primary">
+                <div className="bg-neutral-50 rounded-3xl p-6 md:p-8 flex-1 border border-neutral-100">
+                  <div className="flex items-center gap-4 mb-1">
+                    <div className="bg-white p-3 rounded-2xl shadow-sm border border-neutral-100 text-primary mb-3">
                       <Icon icon={step.icon} className="w-8 h-8" />
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-gudlak font-bold text-neutral-800">
+                    <h3 className="text-2xl md:text-3xl font-gudlak font-bold uppercase">
                       {step.title}
                     </h3>
                   </div>

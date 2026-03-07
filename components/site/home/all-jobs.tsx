@@ -82,8 +82,8 @@ const AllJobsSection = () => {
     >
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         <div className="job-title-reveal text-center max-w-3xl mb-16">
-          <h2 className="text-4xl sm:text-5xl font-gudlak font-extrabold mb-6">
-            Chaque métier compte.
+          <h2 className="text-3xl sm:text-4xl md:text-5xl uppercase font-gudlak font-extrabold mb-6">
+            Chaque metier compte.
           </h2>
           <p className="text-lg text-neutral-600">
             Que vous soyez artisan, commerçant, technicien ou professionnel
@@ -101,10 +101,10 @@ const AllJobsSection = () => {
               <div className="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center text-primary mb-2">
                 <Icon icon={job.icon} className="w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold font-gudlak text-neutral-800">
-                {job.title}
-              </h3>
-              <p className="text-neutral-500">{job.description}</p>
+              <div>
+                <h3 className="text-2xl font-bold mb-1">{job.title}</h3>
+                <p className="text-neutral-500">{job.description}</p>
+              </div>
             </div>
           ))}
         </div>

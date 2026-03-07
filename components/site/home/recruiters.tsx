@@ -46,10 +46,24 @@ const RecruitersSection = () => {
   }, []);
 
   return (
-    <section className="py-24 bg-neutral-900 text-white overflow-hidden min-h-[90vh] flex items-center">
+    <section className="relative py-24 bg-foreground text-white overflow-hidden min-h-[90vh] flex items-center">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+      >
+        <source src="/img/bg-video.mp4" type="video/mp4" />
+      </video>
+
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-foreground/85 z-0" />
+
       <div
         ref={containerRef}
-        className="max-w-7xl mx-auto px-5 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full"
+        className="relative z-10 max-w-7xl mx-auto px-5 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full"
       >
         <div className="slide-left relative w-full aspect-4/3 lg:aspect-square bg-secondary rounded-[3rem] overflow-hidden order-last lg:order-first">
           <Image
@@ -61,7 +75,7 @@ const RecruitersSection = () => {
         </div>
 
         <div className="flex flex-col gap-8">
-          <h2 className="slide-right text-4xl sm:text-5xl md:text-6xl font-gudlak font-extrabold leading-tight">
+          <h2 className="slide-right uppercase text-3xl sm:text-4xl md:text-5xl font-gudlak font-extrabold leading-tight">
             Recrutez autrement.
           </h2>
           <div className="slide-right flex flex-col gap-6 text-lg lg:text-xl text-neutral-300">

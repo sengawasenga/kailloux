@@ -14,32 +14,36 @@ gsap.registerPlugin(ScrollTrigger);
 
 const cards = [
   {
-    title: "Trop d'opportunités restent invisibles.",
+    title: "Chercher du travail ne devrait pas etre complique.",
+    description:
+      "Pourtant, pour des milliers de personnes, la recherche d'emploi est un parcours semé d'embûches. Les offres sont dispersées, difficiles à trouver et souvent peu claires.",
+    image: problemCard1,
+    bg: "primary-dark",
+    color: "white",
+  },
+  {
+    title: "Beaucoup d'opportunites restent invisibles.",
     description:
       "De nombreuses offres d'emploi existent, mais restent difficiles à trouver. Elles circulent de manière informelle ou disparaissent avant même d'être vues.",
     image: problemCard1,
-    accent: "#409ebc",
+    bg: "primary",
+    color: "white",
   },
   {
-    title: "Trop de talents ne trouvent pas leur place.",
+    title: "Un grand nombre de talents ne trouvent pas leur place.",
     description:
       "Des milliers de personnes sont prêtes à travailler. Le manque de visibilité et d'outils accessibles freine leur accès aux opportunités.",
     image: problemCard2,
-    accent: "#093f5c",
+    bg: "secondary",
+    color: "white",
   },
   {
-    title: "Le marché manque de clarté.",
+    title: "Le marche manque de clarte.",
     description:
       "Entre le bouche-à-oreille, les annonces dispersées et les plateformes complexes, la recherche d'emploi devient confuse et décourageante.",
     image: problemCard3,
-    accent: "#f7c313",
-  },
-  {
-    title: "Kailloux simplifie la rencontre.",
-    description:
-      "Nous créons un espace clair et fluide où les offres et les talents se connectent naturellement, sans barrière technique ni complexité inutile.",
-    image: problemCard4,
-    accent: "#409ebc",
+    bg: "primary-dark",
+    color: "white",
   },
 ];
 
@@ -121,17 +125,17 @@ const TheProblemSection = () => {
     <section
       ref={sectionRef}
       id="theProblemSection"
-      className="relative overflow-hidden"
+      className="relative overflow-hidden pb-16 pt-32 mt-12"
     >
       {/* Section title — visible before horizontal scroll starts */}
-      <div
+      {/* <div
         ref={titleRef}
         className="flex flex-col items-center justify-center min-h-[40vh] px-5 md:px-8 pt-20 pb-10"
       >
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-gudlak font-extrabold text-center max-w-5xl leading-tight">
           Chercher du travail ne devrait pas être compliqué.
         </h2>
-      </div>
+      </div> */}
 
       {/* Horizontal scroll track */}
       <div
@@ -142,49 +146,24 @@ const TheProblemSection = () => {
         {cards.map((card, index) => (
           <div
             key={index}
-            className="problem-card relative shrink-0 rounded-3xl overflow-hidden"
+            className={`problem-card relative shrink-0 rounded-[85px] md:rounded-[100px] overflow-hidden bg-${card.bg} text-${card.color}`}
             style={{
-              width: "85vw",
-              height: "58vh",
-              minHeight: "450px",
-              maxHeight: "700px",
+              width: "80vw",
+              height: "90vh",
+              minHeight: "500px",
+              maxHeight: "750px",
             }}
           >
-            {/* Background image */}
-            <Image
-              src={card.image}
-              alt={card.title}
-              fill
-              className="object-cover"
-              draggable="false"
-              sizes="85vw"
-              priority={index === 0}
-            />
-
-            {/* Dark overlay gradient */}
-            <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/40 to-black/20" />
-
             {/* Card content */}
-            <div className="card-content absolute inset-0 flex flex-col justify-end p-8 md:p-12 lg:p-16">
-              {/* Card number */}
-              <span className="text-white/20 font-gudlak text-7xl md:text-8xl lg:text-9xl font-extrabold absolute top-6 right-8 md:top-10 md:right-12 select-none">
-                0{index + 1}
-              </span>
-
-              <div className="max-w-2xl">
-                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-gudlak font-bold text-white leading-tight mb-4 md:mb-6">
+            <div className="card-content absolute inset-0 flex flex-col justify-center p-8 md:p-12 lg:p-16">
+              <div className="max-w-4xl">
+                <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-gudlak font-bold text-white leading-tight mb-4 md:mb-6 uppercase">
                   {card.title}
                 </h3>
-                <p className="text-white/75 text-base sm:text-lg md:text-xl leading-relaxed max-w-xl">
+                <p className="text-white/75 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl">
                   {card.description}
                 </p>
               </div>
-
-              {/* Bottom accent bar */}
-              <div
-                className="mt-8 h-1 w-16 md:w-24 rounded-full"
-                style={{ backgroundColor: card.accent }}
-              />
             </div>
           </div>
         ))}

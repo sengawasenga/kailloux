@@ -18,7 +18,7 @@ export default function Home() {
         <AllJobsSection />
         <HowItWorksSection />
         <RecruitersSection />
-        <VisionSection />
+        {/* <VisionSection /> */}
         <FinalCTASection />
       </main>
       <Footer />
