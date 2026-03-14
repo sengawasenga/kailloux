@@ -6,31 +6,19 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Icon } from "@iconify/react";
 
-import kImage1 from "@/public/img/k-image-1.png";
-import kImage2 from "@/public/img/k-image-2.png";
-import kImage3 from "@/public/img/k-image-3.png";
+import kImage1 from "@/public/img/daniel.png";
+import kImage2 from "@/public/img/carmel.png";
+import kImage3 from "@/public/img/marcel.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const founders = [
   {
-    name: "Carmel Siki",
-    role: "Co-fondateur",
-    image: kImage2,
-    bgColor: "bg-primary-dark",
-    marginTop: "mt-0",
-    socials: [
-      { name: "LinkedIn", icon: "mdi:linkedin", url: "#" },
-      { name: "X", icon: "streamline-logos:x-twitter-logo", url: "#" },
-      { name: "Instagram", icon: "mdi:instagram", url: "#" },
-    ],
-  },
-  {
     name: "Daniel Abutumange",
     role: "Co-fondateur",
     image: kImage1,
     bgColor: "bg-primary",
-    marginTop: "mt-0 md:mt-[80px]",
+    marginTop: "mt-0",
     socials: [
       { name: "LinkedIn", icon: "mdi:linkedin", url: "#" },
       { name: "X", icon: "streamline-logos:x-twitter-logo", url: "#" },
@@ -42,6 +30,18 @@ const founders = [
     role: "Co-fondateur",
     image: kImage3,
     bgColor: "bg-secondary",
+    marginTop: "mt-0 md:mt-[80px]",
+    socials: [
+      { name: "LinkedIn", icon: "mdi:linkedin", url: "#" },
+      { name: "X", icon: "streamline-logos:x-twitter-logo", url: "#" },
+      { name: "Instagram", icon: "mdi:instagram", url: "#" },
+    ],
+  },
+  {
+    name: "Carmel Siki",
+    role: "Co-fondateur",
+    image: kImage2,
+    bgColor: "bg-primary-dark",
     marginTop: "mt-0 md:mt-[40px]",
     socials: [
       { name: "LinkedIn", icon: "mdi:linkedin", url: "#" },
